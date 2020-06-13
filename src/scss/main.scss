@@ -1,17 +1,99 @@
 @import "functions";
 @import "fonts";
 @import "vars";
+@import "slider";
 @import "mainmenu";
+@import "thumbnails";
+@import "portfolio";
+@import "about";
+@import "footer";
 *{
     margin: 0px;
     padding:0px;
     }
-
+//debug
+.debug{
+    border: 1px solid red;
+}
 body{
     background-color: $mainBckgroundTransparent;
 
 }
 
+h1{
+    padding:5px;
+    padding-top: 10px;
+    font-family: "MerriweatherSansBold","Arial";
+    font-size: 36px;
+    text-align: left;
+    @media (max-width: get-max(lg)) {
+        font-size: 30px;
+        padding-top: 5px;
+    }
+    @media (max-width: get-max(md)) {
+        font-size: 24px;
+        padding-top: 5px;
+    }
+    @media (max-width: get-max(sm)) {
+        font-size: 18px;
+        padding-top: 0px;
+    }
+
+}
+
+h2{
+    padding:5px;
+    padding-top: 10px;
+    font-family: "MerriweatherSansRegular","Arial";
+    font-size: 18px;
+    text-align: left;
+    color:#555555;
+    @media (max-width: get-max(lg)) {
+        font-size: 16px;
+        padding-top: 5px;
+    }
+    @media (max-width: get-max(md)) {
+        font-size: 14px;
+        padding-top: 5px;
+    }
+    @media (max-width: get-max(sm)) {
+        font-size: 12px;
+        padding-top: 0px;
+    }
+}
+
+h3{
+    color:#666666;
+    //padding:5px;
+    padding-top: 10px;
+    font-family: "MerriweatherSansRegular","Arial";
+    font-size: 14px;
+    text-align: left;
+    text-transform: uppercase;
+    @media (max-width: get-max(lg)) {
+
+        padding-top: 5px;
+    }
+    @media (max-width: get-max(md)) {
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    @media (max-width: get-max(sm)) {
+
+        padding-top: 0px;
+    }
+}
+
+p{
+
+    font-family: "NotoSansRegular";
+    font-size: 14px;
+    color: #888888;
+    @media (max-width: get-max(md)) {
+        font-size: 10px;
+        padding:3px;
+    }
+}
 .nopaddings {
     padding: 0 !important;
     margin: 0 !important;

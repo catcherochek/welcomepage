@@ -1,11 +1,25 @@
-
 #carousel-area {
+
+    p{padding:20px;}
+
+    img {
+        width: 100%;
+    }
     .btn-lg {
         background-color: $mainBckgroundTransparent;
         margin: 10px;
         color: $typografyInverseColor;
 
     }
+
+    .animated2s {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    p{text-align:left;color:white;text-transform: uppercase;}
     /*zoom effects with slider*/
     @-webkit-keyframes zoom {
         from {
@@ -38,52 +52,121 @@
         }
     }
 
+
     .carousel-item .carousel-caption {
 
         .carousel-inner .active {
             opacity: 1;
         }
 
-        h3 {
 
-            @media (max-width: 767px) {
-                font-size: 12px;
 
+        .textarea{
+            min-height: 100px;
+            height: 60%;
+            min-width: 300px;
+            width: 600px;
+            background-color: rgba(#4C3442,.4);
+            left:15%;
+            margin-left: 5%;
+            margin-left: 5%;
+            margin-top: 50px;
+            resize: both;
+            @media (max-width: get-max(lg)) {
+                left:10%;
             }
-            font-size: 50px;
-            margin-bottom: 15px;
-            color: #fff;
-            font-weight: 700;
-
+            @media (max-width: get-max(md)){
+               margin-top: 0px;
+                width: 90%;
+            }
+            @media (max-width: get-max(sm)){
+                right: 1%;
+                left: 1%;
+            }
         }
-
-        h5 {
-            color: #fff;
-            line-height: 24px;
-            font-weight: 400;
-            margin-bottom: 30px;
-            font-size: 16px;
-            font-family: "Rubik", sans-serif;
-        }
-
-        top: 28%;
-        right: 10%;
-        left: 10%;
+        top: 5px;
+        right: 25%;
+        left: 25%;
+        bottom: 5px;
         text-shadow: none;
+        align-content: center;
+        overflow: hidden;
+
+        @media (max-width: get-max(lg)) {
+            right: 16%;
+            left: 16%;
+        }
+        @media (max-width: get-max(md)){
+            right: 8%;
+            left: 8%;
+        }
+        @media (max-width: get-max(sm)){
+            right: 1%;
+            left: 1%;
+        }
+
+
+
     }
     #carousel-slider{
-        a i.fa::before{
-            opacity: .5;
-           /* border: 2px solid $mainborderColor;*/
-            background-color: $mainBckground;
-            border-radius: 20px;
-            display: inline-block;
-            padding: 10px;
+        a {
+            i.fa::before{
+                opacity: .5;
+               /* border: 2px solid $mainborderColor;*/
+                background-color: #a8a8a8;
+                border-radius: 20px;
+                display: inline-block;
+                padding: 10px;
+
+            }
+
+            i.fa{
+                color: white;
+            }
+
+            &:hover i.fa::before{
+                background-color: #ededed;
+            }
+
+            .dot{
+                margin: 10px;
+            }
+
+            &.carousel-control-prev,&.carousel-control-next{
+                width: 25%;
+                z-index: 99;
+                @media (max-width: get-max(lg)){
+                    width: 16%;
+                }
+                @media (max-width: get-max(md)){
+                    width: 8%;
+                }
+                @media (max-width: get-max(sm)){
+                    width: 2%;
+                }
+
+            }
+
+            &.carousel-control-prev {
+                justify-content: flex-end;
+                span{
+                    margin-right: -35px;
+                }
+            }
+
+            &.carousel-control-next {
+                justify-content: flex-start;
+                span{
+                    margin-left: -35px;
+                }
+
+            }
         }
-        a i.fa{
-            color: $typografyColor;
-        }
+
+
     }
+
+
 
 }
 

@@ -1,0 +1,54 @@
+#thumbnails{
+    .thumbnail{
+        margin-top:30px;
+        margin-bottom:20px;
+        margin-left:10px;
+        background-color: rgba($mainDarkenBackground,.2);
+        border: 1px solid rgba(0, 0, 0, 0);
+
+        .image{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: center;
+            .wrapper {
+                padding: 10px;
+                display: inline-block;
+                background-color: #494949;
+                border-radius: 50%;
+                img{
+
+                }
+            }
+
+        }
+        .header{
+            text-align:justify;
+            h3{
+                text-align:center;
+                letter-spacing: 0.1em;
+            }
+            &:after{
+                /* used to stretch word */
+                content: '';
+                width: 100%;
+                display: inline-block;
+            }
+
+        }
+        .text{
+            letter-spacing:0.1em;
+            padding: 10px;
+        }
+        &:hover{
+            .image{
+                .wrapper{
+                    background-color: $mainBckgroundInverse;
+                }
+            }
+            cursor: pointer;
+            border: 1px solid $mainBckgroundInverse;
+        }
+    }
+
+}

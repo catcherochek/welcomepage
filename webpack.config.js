@@ -60,9 +60,14 @@ module.exports = {
             },
             {from:'src/js/',to:'js',ignore:['entry.js'],
 
-                cache: true},
+                cache: true,
+                //transform(content,path){
+                  //  return optimize(content);
+                //}
+            },
             {from:'src/css/',to:'css',
              transform(content, path) {
+                 //return optimize(content);
                  return Buffer.from(sqlwish.minify(content.toString()));
               },
             },

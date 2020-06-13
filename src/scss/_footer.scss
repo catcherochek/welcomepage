@@ -1,0 +1,20 @@
+footer{
+    &>div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .nav{
+            float:none;
+        }
+        .contact{
+    
+        }
+        .feedback{
+    
+        }
+        .copyright{
+            flex: 0 1 100%;
+        }
+
+    }
+}
